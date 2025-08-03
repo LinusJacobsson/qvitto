@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "click>=8.2.2",
+    "pydantic>=2.11.7",
     "rich>=14.1.0",
 ]
 
@@ -28,7 +29,6 @@ target-version = "py312"
 [tool.ruff.lint]
 select = ["E", "F", "B", "I"]       # PEP 8, Pyflakes, Bugbear, isort
 ignore = ["E501"]                   # Black handles long lines
-fix    = true                       # apply safe autofixes by default
 
 
 [tool.mypy]
@@ -39,4 +39,4 @@ exclude        = ["tests/.*"]
 
 # -------------------------------- Pytest -----------------------------
 [tool.pytest.ini_options]
-addopts = "-q --cov=qvitto"
+addopts = "-q"
