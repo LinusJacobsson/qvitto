@@ -1,0 +1,42 @@
+[project]
+name = "qvitto"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.2.2",
+    "rich>=14.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "mypy>=1.17.1",
+    "pre-commit>=4.2.0",
+    "pytest>=8.4.1",
+    "pytest-cov>=6.2.1",
+]
+lint = [
+    "ruff>=0.12.7",
+]
+
+[tool.ruff]
+line-length    = 88                 
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "I"]       # PEP 8, Pyflakes, Bugbear, isort
+ignore = ["E501"]                   # Black handles long lines
+fix    = true                       # apply safe autofixes by default
+
+
+[tool.mypy]
+python_version = "3.12"
+strict         = true
+plugins        = []
+exclude        = ["tests/.*"]
+
+# -------------------------------- Pytest -----------------------------
+[tool.pytest.ini_options]
+addopts = "-q --cov=qvitto"
