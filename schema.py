@@ -1,5 +1,16 @@
 from pydantic import BaseModel, Field
+from enum import Enum
 
+class StoreChain(str, Enum):
+    HEMKÖP = "HEMKÖP"
+    COOP = "COOP"
+    ICA = "ICA"
+    LIDL = "LIDL"
+    WILLYS = "WILLYS"
+
+class Person(str, Enum):
+    LINUS = "LINUS"
+    HALA    = "HALA"
 
 class Location(BaseModel):
     latitude: float = Field(..., description="Latitude of the location")
@@ -13,4 +24,4 @@ class Store(BaseModel):
     chain: str = Field(..., description="Name of the chain the store belongs to")
     number_of_visits: int = Field(..., description="Number of visits to the store")
     location: Location = Field(..., description="Location details of the store")
-    
+
