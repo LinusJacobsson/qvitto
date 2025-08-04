@@ -1,0 +1,38 @@
+# ─── Branch-prefix rules ──────────────────────────────────────────────
+feat:
+  - head-branch: ['^feat/', '^feature/']
+
+fix:
+  - head-branch: ['^fix/', '^bug/', '^hotfix/']
+
+perf:
+  - head-branch: ['^perf/', '^performance/']
+
+refactor:
+  - head-branch: ['^refactor/']
+
+docs:
+  - head-branch: ['^docs/', '^doc/']
+
+chore:
+  - head-branch: ['^chore/', '^maintenance/', '^deps?/']
+
+ci:
+  - head-branch: ['^ci/', '^infra/']
+
+test:
+  - head-branch: ['^test/', '^tests?/']
+
+
+# ─── Path-based fall-backs (optional) ────────────────────────────────
+ci:
+  - changed-files:
+      any-glob-to-any-file: ['.github/workflows/**', 'docker/**']
+
+docs:
+  - changed-files:
+      any-glob-to-any-file: ['docs/**', '**/*.md', '**/*.rst']
+
+test:
+  - changed-files:
+      all-globs-to-all-files: 'tests/**'
