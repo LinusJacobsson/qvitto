@@ -21,25 +21,20 @@ body:
         - [ ] parser accepts Lidl PDF
         - [ ] integration test with sample receipt
       placeholder: |
-        - [ ] …
-        - [ ] …
+        - [ ] Task 1
+        - [ ] Task 2
 
-  - type: markdown
-    attributes:
-      value: |
-        ### 🛠️  Tech / libs  
-        - uv  
-        - SQLModel 0.0.16  
-        - FastAPI 0.111  
-
-  - type: checkboxes
+  - type: textarea
     id: definition_of_done
     attributes:
       label: ✅  Definition of Done  
       description: |
-        *All check-boxes must be true before the issue can be closed.*
-      options:
-        - label: Unit tests cover happy + edge cases (≥ 90 % branch coverage)
-        - label: pre-commit run --all-files` passes
-        - label: CI pipeline green
-        - label: Docs section updated (`docs/feature_x.md`)
+        Define the criteria for completing this feature.  
+        Example:
+        - [ ] Unit tests cover happy + edge cases (≥ 90 % branch coverage)
+        - [ ] `pre-commit run --all-files` passes
+        - [ ] CI pipeline green
+        - [ ] Docs section updated (`docs/feature_x.md`)
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
