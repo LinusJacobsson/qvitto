@@ -40,6 +40,6 @@ body:
         *All check-boxes must be true before the issue can be closed.*
       options:
         - label: Unit tests cover happy + edge cases (≥ 90 % branch coverage)
-        - label: `pre-commit run --all-files` passes
+        - label: pre-commit run --all-files` passes
         - label: CI pipeline green
         - label: Docs section updated (`docs/feature_x.md`)
