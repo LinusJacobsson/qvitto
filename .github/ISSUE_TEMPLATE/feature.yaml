@@ -1,0 +1,44 @@
+name: Feature issue
+description: Track a new roadmap item from idea → Definition of Done
+title: "feat: <short description>"
+labels: [feat]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🎯  Goal
+        _Short sentence describing the objective._
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: 🔧  Tasks
+      description: |
+        Break the feature into atomic check-boxes.  
+        Example:
+        - [ ] parser accepts Lidl PDF
+        - [ ] integration test with sample receipt
+      placeholder: |
+        - [ ] …
+        - [ ] …
+
+  - type: markdown
+    attributes:
+      value: |
+        ### 🛠️  Tech / libs  
+        - uv  
+        - SQLModel 0.0.16  
+        - FastAPI 0.111  
+
+  - type: checkboxes
+    id: definition_of_done
+    attributes:
+      label: ✅  Definition of Done  
+      description: *All check-boxes must be true before the issue can be closed.*
+      options:
+        - label: Unit tests cover happy + edge cases (≥ 90 % branch coverage)
+        - label: `pre-commit run --all-files` passes
+        - label: CI pipeline green
+        - label: Docs section updated (`docs/feature_x.md`)
