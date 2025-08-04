@@ -36,7 +36,8 @@ body:
     id: definition_of_done
     attributes:
       label: ✅  Definition of Done  
-      description: *All check-boxes must be true before the issue can be closed.*
+      description: |
+        *All check-boxes must be true before the issue can be closed.*
       options:
         - label: Unit tests cover happy + edge cases (≥ 90 % branch coverage)
         - label: `pre-commit run --all-files` passes
